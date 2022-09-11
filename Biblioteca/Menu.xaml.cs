@@ -29,7 +29,7 @@ namespace Biblioteca
         private void EmpleadosAbrir_Click(object sender, RoutedEventArgs e)
         {
             ModuloEmpleados empleado = new ModuloEmpleados();
-            //Aqui poner la funcion para abrir la ventana de su modulo brayn
+            // evento para abrir la ventana del modulo empleados
             
             empleado.Show();
             
@@ -39,7 +39,7 @@ namespace Biblioteca
 
         private void ClientesAbrir_Click(object sender, RoutedEventArgs e)
         {
-            //Aqui poner la funcion para abrir la ventana de su modulo
+            //evento para abrir la ventana del modulo clientes
             ModuloClientes clientes= new ModuloClientes();
             clientes.Show();
            
@@ -49,7 +49,7 @@ namespace Biblioteca
 
         private void LibrosAbrir_Click(object sender, RoutedEventArgs e)
         {
-            
+            //evento para abrir la ventana del modulo libros
             ModuloLibros libro = new ModuloLibros();
             libro.Show();
             this.Close();
@@ -65,6 +65,7 @@ namespace Biblioteca
 
         private void PrestamosAbrir_Click(object sender, RoutedEventArgs e)
         {
+            //evento para abrir la ventana del modulo prestamos
             ModuloPrestamos prestamos = new ModuloPrestamos();
             prestamos.Show();
             this.Close();

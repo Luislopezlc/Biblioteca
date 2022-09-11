@@ -45,31 +45,7 @@ namespace Biblioteca
            
             this.Close();
         }
-        //private void SalirCliente_Click(object sender, RoutedEventArgs e)
-        //{
-        //    Menu menu = new Menu();
-        //    menu.Show();
-        //    this.Close();
 
-        //}
-        //private void SeleccionarCliente(object sender, RoutedEventArgs e)
-        //{
-
-        //    Clientes cliente = new Clientes();
-        //    cliente = (sender as FrameworkElement).DataContext as Clientes;
-        //    GuardarCliente enviar = new GuardarCliente();
-        //    enviar.Show();
-        //    enviar.opcion = "Editar";
-        //    enviar.TxtIdClientes.Text = cliente.Id.ToString();
-        //    enviar.TxtNombre.Text = cliente.Nombre.ToString();
-        //    enviar.TxtFec_regis.Text = cliente.Fec_regis.ToString();
-        //    enviar.TxtDireccion.Text = cliente.Direccion.ToString();
-        //    enviar.TxtEdad.Text = cliente.Edad.ToString();
-        //    enviar.CmbGenero.Text = cliente.Genero.ToString();
-        //    enviar.TxtFec_nac.Text = cliente.Fec_nac.ToString();
-        //    enviar.TxtTelefono.Text = cliente.Telefono.ToString();
-        //    this.Close();
-        //}
 
         private void BorrarCliente(object sender, RoutedEventArgs e)
         {

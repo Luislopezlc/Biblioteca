@@ -35,7 +35,7 @@ namespace Biblioteca
         }
 
 
-        private void Recordar_Click(object sender, RoutedEventArgs e)
+        private void Recordar_Click(object sender, RoutedEventArgs e)//devuelve un messabox con la contraseña del user
         {
             Empleados empleado1 = new Empleados();
 
@@ -60,7 +60,7 @@ namespace Biblioteca
 
         }
 
-        private void Iniciar_Click(object sender, RoutedEventArgs e)
+        private void Iniciar_Click(object sender, RoutedEventArgs e) //valida el user y password ingresados
         {
             string Correo;
             string Contra;

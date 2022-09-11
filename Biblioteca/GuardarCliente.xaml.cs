@@ -58,7 +58,7 @@ namespace Biblioteca
                 {
                     Clientes cliente = new Clientes()
                     {
-                       //Preguntar por qué , en vez de ;
+                       
                         Nombre = TxtNombre.Text,
                         Fec_regis = TxtFec_regis.Text,
                         Direccion= TxtDireccion.Text,
@@ -128,12 +128,6 @@ namespace Biblioteca
             nombre = validar.Nombre(TxtNombre, ValiNombre);
             DatosCorrectos(nombre, fec, direccion, edad, genero, telefono, fecn);
         }
-        //private void txtFec_regis_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    fec = validar.Fecha(TxtFec_regis, ValiFec_regis);
-        //    DatosCorrectos(nombre, fec, direccion, edad, genero, telefono);
-        //}
-
 
         private void TxtDireccion_TextChanged(object sender, TextChangedEventArgs e)
         {

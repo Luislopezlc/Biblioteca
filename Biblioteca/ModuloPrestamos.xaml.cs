@@ -25,9 +25,6 @@ namespace Biblioteca
         {
             InitializeComponent();
             MostrarPrestamos();
-            //this.Hide();
-            //this.Show();
-            //this.Close();
         }
 
         public void MostrarPrestamos()
