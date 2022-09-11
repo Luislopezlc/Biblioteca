@@ -1,0 +1,94 @@
+﻿<Window x:Class="Biblioteca.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStartupLocation="CenterScreen"
+        xmlns:local="clr-namespace:Biblioteca"
+        mc:Ignorable="d"
+        Title="Menu" Height="500" Width="800">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="BorderThickness" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="9" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FFACC4AE">
+        <Button Style="{DynamicResource BorderThickness}" x:Name="btEmpleados" Content="Empleados" HorizontalAlignment="Left" Margin="176,185,0,0" VerticalAlignment="Top"  Width="136" Click="EmpleadosAbrir_Click" FontFamily="Arial Narrow" FontSize="26" Background="#FFA5D4E0" BorderBrush="#FF60C9E4" BorderThickness="2,2,2,2" Foreground="#FF403F3F" RenderTransformOrigin="0.513,-0.41"/>
+        <Button Style="{DynamicResource BorderThickness}" Content="Clientes" HorizontalAlignment="Left" Margin="174,375,0,0" VerticalAlignment="Top"  Width="138" Click="ClientesAbrir_Click" FontFamily="Arial Narrow" FontSize="26" Background="#FFA5D4E0" BorderBrush="#FF60C9E4" BorderThickness="2,2,2,2" Foreground="#FF403F3F"/>
+        <Button Style="{DynamicResource BorderThickness}" Content="Prestamos" HorizontalAlignment="Left" Margin="456,185,0,0" VerticalAlignment="Top"  Width="138" Click="PrestamosAbrir_Click" FontFamily="Arial Narrow" FontSize="26" Background="#FFA5D4E0" BorderBrush="#FF60C9E4" BorderThickness="2,2,2,2" Foreground="#FF403F3F"/>
+        <Button Style="{DynamicResource BorderThickness}" Content="Libros" HorizontalAlignment="Left" Margin="456,375,0,0" VerticalAlignment="Top"  Width="136" Click="LibrosAbrir_Click" FontFamily="Arial Narrow" FontSize="26" Background="#FFA5D4E0" BorderBrush="#FF60C9E4" BorderThickness="2,2,2,2" Foreground="#FF403F3F"/>
+        <Image x:Name="ImgCandado" HorizontalAlignment="Left" Height="78" Margin="682,332,0,0" VerticalAlignment="Top" Width="86" Source="/candado.png" MouseDown="CerrarMenu_Click" />
+        <Image x:Name="ImgClientes" HorizontalAlignment="Left" Height="143" Margin="151,233,0,0" VerticalAlignment="Top" Width="161" Source="/5.png"/>
+        <Image x:Name="ImgPrestamos" HorizontalAlignment="Left" Height="163" Margin="439,42,0,0" VerticalAlignment="Top" Width="172" Source="/8.png"/>
+        <Image x:Name="ImgEmpleados" HorizontalAlignment="Left" Height="177" Margin="161,48,0,0" VerticalAlignment="Top" Width="173" Source="/Logo biblioteca (2).png" RenderTransformOrigin="0.5,0.5">
+
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.178"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="ImgLibros"  HorizontalAlignment="Left" Height="162" Margin="456,258,0,0" VerticalAlignment="Top" Width="152" Source="/Logo biblioteca (1).png"/>
+
+        <Label x:Name="txtrol"   Content=""  Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.058,0.51" Foreground="White" FontFamily="Arial Narrow" FontSize="25" Margin="30,233,0,0" FontWeight="Bold" Width="159" />
+
+
+
+
+    </Grid>
+</Window>

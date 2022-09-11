@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="5.png" />
+    <None Remove="8.png" />
+    <None Remove="b004682be74501b727fe855d6c8c7b78.png" />
+    <None Remove="candado.png" />
+    <None Remove="GGKWTDEVJZH4HGP5LW4FZYAJXY.jpg" />
+    <None Remove="li.png" />
+    <None Remove="libros png.png" />
+    <None Remove="Logo biblioteca %281%29.png" />
+    <None Remove="Logo biblioteca %282%29.png" />
+    <None Remove="mundo.png" />
+    <None Remove="perso.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="5.png" />
+    <Resource Include="8.png" />
+    <Resource Include="b004682be74501b727fe855d6c8c7b78.png" />
+    <Resource Include="candado.png" />
+    <Resource Include="GGKWTDEVJZH4HGP5LW4FZYAJXY.jpg" />
+    <Resource Include="li.png" />
+    <Resource Include="libros png.png" />
+    <Resource Include="Logo biblioteca (1).png" />
+    <Resource Include="Logo biblioteca (2).png" />
+    <Resource Include="mundo.png" />
+    <Resource Include="perso.png" />
+  </ItemGroup>
+
+</Project>
