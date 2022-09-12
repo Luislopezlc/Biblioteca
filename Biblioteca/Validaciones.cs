@@ -7,7 +7,9 @@ using System.Windows.Controls;
 
 namespace Biblioteca
 {
-    public class Validaciones
+    //Realice un clase para validar los tipos de datos para aprender como funcionaban las validaciones con Regex
+    //se pudo usar un libreria y seria mas sencillo pero preferi hacerlo de este modo
+    public class Validaciones//clase para validar las tipos de datos que se usan en el proyecto
     {
 
         public bool NombreLib(TextBox txtbox1, Label lb1)//valida un texto largo que puede contener numeros
